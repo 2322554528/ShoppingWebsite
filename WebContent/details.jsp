@@ -17,7 +17,7 @@
     <div class="site-nav w1200">
       <p class="sn-back-home">
         <i class="layui-icon layui-icon-home"></i>
-        <a href="#">首页</a>
+        <a href="index.jsp">首页</a>
       </p>
       <div class="sn-quick-menu">
        <div class="login"><a href="login.jsp">登录</a></div>
