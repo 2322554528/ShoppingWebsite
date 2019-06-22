@@ -27,6 +27,10 @@
 			</div>
 			<div class="aui-register-form" id="verifyCheck">
 				<form action="">
+				     <div class="aui-register-form-item">
+						<input type="text" name="username" maxlength="20"  placeholder="账户名(不能修改请慎重输入)" class="txt03 f-r3 required" tabindex="3" data-valid="isNonEmpty||between:3-20||isUname" data-error="<i class='icon-tips'></i>您还没有输入账户名||<i class='icon-tips'></i>用户名长度3-20位||<i class='icon-tips'></i>只能输入字母、数字、且以中文或字母开头" id="adminNo">
+						<label class="focus valid"></label>
+					</div>
 					<div class="aui-register-form-item">
 						<input type="text" name="phone" placeholder="手机号码" class="txt01 f-r3 required" keycodes="tel" tabindex="1" data-valid="isNonEmpty||isPhone" data-error="<i class='icon-tips'></i>请输入手机号||<i class='icon-tips'></i>手机号码格式不正确" maxlength="11" id="phone">
 						<label class="focus valid"><div class="msg" style="display:none"><i class='icon-tips'></i>您还未输入手机号</div></label>
@@ -35,10 +39,6 @@
 					</div>
 					<div class="aui-register-form-item">
 						<input type="text" placeholder="动态码" maxlength="6" id="verifyNo" class="txt02 f-r3 f-fl required" tabindex="2" data-valid="isNonEmpty||isInt" data-error="<i class='icon-tips'></i>请填写正确的手机动态码||<i class='icon-tips'></i>请填写6位手机动态码">
-						<label class="focus valid"></label>
-					</div>
-					<div class="aui-register-form-item">
-						<input type="text" name="username" maxlength="20"  placeholder="账户名" class="txt03 f-r3 required" tabindex="3" data-valid="isNonEmpty||between:3-20||isUname" data-error="<i class='icon-tips'></i>您还没有输入账户名||<i class='icon-tips'></i>用户名长度3-20位||<i class='icon-tips'></i>只能输入字母、数字、且以中文或字母开头" id="adminNo">
 						<label class="focus valid"></label>
 					</div>
 					<div class="aui-register-form-item">
@@ -56,7 +56,7 @@
 				</form>
 			</div>
 			<div class="aui-register-bottom">
-				<a>©17.com</a>
+				<a>©618.com</a>
 				<a href="#">联系客服</a>
 				<a href="#">帮助中心</a>
 				<div class="clear"></div>
