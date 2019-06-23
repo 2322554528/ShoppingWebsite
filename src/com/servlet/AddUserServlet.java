@@ -32,9 +32,9 @@ public class AddUserServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try {
-			String empno = request.getParameter("account_name");
-			String ename = request.getParameter("account_phone");
-			String job = request.getParameter("account_password");
+			String name = request.getParameter("account_name");
+			String phone = request.getParameter("account_phone");
+			String password = request.getParameter("account_password");
 			
 			
 			Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -42,9 +42,9 @@ public class AddUserServlet extends HttpServlet {
 	DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521/orcl","scott","admin");
 			String sql = "insert into user_a (account_name,account_phone,account_password)values(?,?,?)";
 			PreparedStatement psmt = conn.prepareStatement(sql);
-		    psmt.setObject(1,account_name);
-		    psmt.setObject(2,account_phone);
-		    psmt.setObject(3,account_password);
+		    psmt.setObject(1,name);
+		    psmt.setObject(2,phone);
+		    psmt.setObject(3,password);
 		    psmt.execute();
 		    
 		} catch (Exception e) {
