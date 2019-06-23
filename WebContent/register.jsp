@@ -15,7 +15,6 @@
 </head>
 <body>
 
-
 	<div class="aui-register-popup">
 		<div class="aui-register-box">
 			<div class="aui-register-link">
@@ -26,14 +25,14 @@
 				<img src="images/logo.png" alt="">
 			</div>
 			<div class="aui-register-form" id="verifyCheck">
-				<form action="">
+				<form action="adduser">
 				     <div class="aui-register-form-item">
-						<input type="text" name="username" maxlength="20"  placeholder="账户名(不能修改请慎重输入)" class="txt03 f-r3 required" tabindex="1" data-valid="isNonEmpty||between:3-20||isUname" data-error="<i class='icon-tips'></i>您还没有输入账户名||<i class='icon-tips'></i>用户名长度3-20位||<i class='icon-tips'></i>只能输入字母、数字、且以中文或字母开头" id="adminNo">
-						<label class="focus valid"></label>
+						<input type="text" name="name" maxlength="20"  placeholder="账户名(不能修改请慎重输入)" class="txt03 f-r3 required" tabindex="1" data-valid="isNonEmpty||between:3-20||isUname" data-error="<i class='icon-tips'></i>您还没有输入账户名||<i class='icon-tips'></i>用户名长度3-20位||<i class='icon-tips'></i>只能输入字母、数字、且以中文或字母开头" id="adminNo">
+						<label for="name" class="focus valid"></label>
 					</div>
 					<div class="aui-register-form-item">
 						<input type="text" name="phone" placeholder="手机号码" class="txt01 f-r3 required" keycodes="tel" tabindex="2" data-valid="isNonEmpty||isPhone" data-error="<i class='icon-tips'></i>请输入手机号||<i class='icon-tips'></i>手机号码格式不正确" maxlength="11" id="phone">
-						<label class="focus valid"><div class="msg" style="display:none"><i class='icon-tips'></i>您还未输入手机号</div></label>
+						<label for="phone" class="focus valid"><div class="msg" style="display:none"><i class='icon-tips'></i>您还未输入手机号</div></label>
 						<span class="aui-get-code btn btn-gray f-r3 f-ml5 f-size13" id="time_box" disabled style="display:none;"></span>
 						<span class="aui-get-code btn btn-gray f-r3 f-ml5 f-size13" id="verifyYz" >获取动态码</span>
 					</div>
@@ -43,7 +42,7 @@
 					</div>
 					<div class="aui-register-form-item">
 						<input type="password" name="password" placeholder="设置密码" id="password" maxlength="20" class="txt04 f-r3 required" tabindex="4" style="ime-mode:disabled;" onpaste="return  false" autocomplete="off" data-valid="isNonEmpty||between:6-20||level:2" data-error="<i class='icon-tips'></i>密码太短，最少6位||<i class='icon-tips'></i>密码长度6-20位||<i class='icon-tips'></i>密码太简单，有被盗风险，建议字母+数字的组合">
-						<label class="focus valid"></label>
+						<label for="password" class="focus valid"></label>
 					</div>
 					<div class="aui-register-form-item">
 						<input type="password" name="password" placeholder="确认密码" maxlength="20" class="txt05 f-r3 required" tabindex="5" style="ime-mode:disabled;" onpaste="return  false" autocomplete="off" data-valid="isNonEmpty||between:6-16||isRepeat:password" data-error="<i class='icon-tips'></i>密码太短，最少6位||<i class='icon-tips'></i>密码长度6-16位||<i class='icon-tips'></i>两次密码输入不一致" id="rePassword">
@@ -51,7 +50,9 @@
 					</div>
 					<div class="aui-register-form-item">
 						<div class="protocol">注册即同意<a  href="#">《用户使用协议》</a>&amp;<a href="#">《隐私权条款》</a></div>
-						<input id="aui-btn-reg" class="aui-btn-reg" placeholder=""  readonly="readonly" value="注册" >
+						<a href="user.jsp">
+						<input id="aui-btn-reg" class="aui-btn-reg" placeholder=""  readonly="readonly" value="注册"  >
+						</a>
 					</div>
 				</form>
 			</div>
@@ -63,20 +64,6 @@
 			</div>
 		</div>
 	</div>
-
+	
 </body>
-
-<script type="text/javascript">
-	$(function() {
-
-		$("#aui-btn-reg").click(function() {
-			if (!verifyCheck._click()) return;
-			alert('恭喜你！注册成功')
-
-		});
-	});
-</script>
-
-
-
 </html>

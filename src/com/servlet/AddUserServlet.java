@@ -40,13 +40,14 @@ public class AddUserServlet extends HttpServlet {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			Connection conn = 
 	DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521/orcl","scott","admin");
-			String sql = "insert into user_a (account_name,account_phone,account_password)values(?,?,?)";
+			String sql = "insert into user_a (account_name,account_phone,account_password) values(?,?,?)";
 			PreparedStatement psmt = conn.prepareStatement(sql);
 		    psmt.setObject(1,name);
 		    psmt.setObject(2,phone);
 		    psmt.setObject(3,password);
 		    psmt.execute();
 		    
+		    response.sendRedirect("user.jsp");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
