@@ -25,7 +25,7 @@
 				<img src="images/logo.png" alt="">
 			</div>
 			<div class="aui-register-form" id="verifyCheck">
-				<form action="adduser">
+				<form action="adduser" method="post">
 				     <div class="aui-register-form-item">
 						<input type="text" name="name" maxlength="20"  placeholder="账户名(不能修改请慎重输入)" class="txt03 f-r3 required" tabindex="1" data-valid="isNonEmpty||between:3-20||isUname" data-error="<i class='icon-tips'></i>您还没有输入账户名||<i class='icon-tips'></i>用户名长度3-20位||<i class='icon-tips'></i>只能输入字母、数字、且以中文或字母开头" id="adminNo">
 						<label for="name" class="focus valid"></label>
